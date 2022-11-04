@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import CurriculoPage from './components/curriculoPage/curriculoPage';
+import { SiteBackPage } from './components/siteBackPage/siteBackPage';
+import Photo from "../src/Photo/curriculogabrielnovo.jpeg"
+import Projects from './components/myProjects.Page/projects';
+import ProjectsModal from './components/myProjects.Page/projectsModal/projectsModal';
+import MyValue from './components/myValue/myValue';
+import MyFuture from './components/myFuture/myFuture';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    //<MyValue/>
+    // <SiteBackPage/>
+   // <Projects/>
+    //<ProjectsModal/>
+    //<CurriculoPage Photo={Photo}/>]
+    <MyFuture/>
   );
 }
 
