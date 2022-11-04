@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import SunImage from "../../Photo/sunsetDrive.gif"
 
 
 export const MyFutureStyle = styled.div`
@@ -68,7 +68,14 @@ export const MyFutureTopTwoStyle = styled.div`
     width:25%;
     height:100%;
     background-color:black;
-    
+    display:flex;
+    justify-content:flex-start;
+    background-image:url(${SunImage});
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+   
+
 `
 export const MyFutureTopThreeStyle = styled.div`
 

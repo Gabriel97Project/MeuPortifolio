@@ -1,6 +1,6 @@
 import React from 'react'
 import { MyFutureSonStyle, MyFutureStyle, MyFutureTopThreeStyle, MyFutureTopOneStyle, MyFutureTopTwoStyle } from './myFutureStyle'
-import { FaDesktop } from "react-icons/fa";
+import SunImage from "../../Photo/sunset.gif"
 const MyFuture = () => {
     return (
         <MyFutureStyle>
@@ -19,7 +19,10 @@ const MyFuture = () => {
 
                 </MyFutureTopOneStyle>
                 <MyFutureTopTwoStyle>
+                   {/* <img src={}/> */}
+                    {/* <div className='SunClass'>
 
+                    </div> */}
                 </MyFutureTopTwoStyle>
                 <MyFutureTopThreeStyle>
                     <div className='divOne'>
