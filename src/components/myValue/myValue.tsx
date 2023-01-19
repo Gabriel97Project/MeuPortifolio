@@ -1,21 +1,40 @@
 import React, { useState } from 'react'
-import { MyValueFatherStyle, MyValueGrandFatherStyle, MyValueSonStyle, MyValueSonThreeStyle, MyValueSonTwoStyle, MyValueStyle } from './myValueStyle'
-import { BsFillArrowRightSquareFill, BsFillArrowLeftSquareFill } from "react-icons/bs";
+import { MyValueFatherStyle, MyValueGrandFatherStyle, MyValueSonStyle, 
+        MyValueSonThreeStyle, MyValueSonTwoStyle, MyValueStyle } from './myValueStyle'
+import { SlActionRedo, SlActionUndo } from "react-icons/sl";
+import { HiOutlineArrowLeftCircle } from "react-icons/hi2";
+
+
+
+
+
 const MyValue = () => {
     const [imagePlace, setImagePlace] = useState("0px")
+    const [myValueState, setMyValueState] = useState(false);
 
+  
+        <button onClick={()=>setMyValueState(true)}></button>
+        if(myValueState){
+            
+        }else{
+            <button onClick={()=>setMyValueState(true)}></button>
+        }
+   
 
+    
 
     return (
         <MyValueStyle>
+            <button className="ButtonPageBack"> <a className='backLink' href="/"> <HiOutlineArrowLeftCircle className="backIcon"/></a></button>
             <MyValueGrandFatherStyle>
+                
                 <MyValueFatherStyle positions={imagePlace}>
                     <MyValueSonStyle >
 
                         <div className='divClassOne'>
                             <div className='divOne'>
 
-                                <h2>Respeito pelo próximo</h2>
+                                <h2>Respeito</h2>
                                 <p>Eu acredito com toda certeza, que cada pessoa tem seu valor
                                     na nossa sociedade e merece ser respeitada. 
                                     Familia, amigos, colegas de trabalho e qualquer um. Devemos respeitar cada 
@@ -26,13 +45,13 @@ const MyValue = () => {
                         </div>
 
                         <button className='buttonFrontClass' onClick={() => setImagePlace("600px")}>
-                            < BsFillArrowRightSquareFill className='iconClass' />
+                            < SlActionRedo className='iconClass' />
                         </button>
                     </MyValueSonStyle>
 
                     <MyValueSonTwoStyle>
                         <button className='buttonBackClass' onClick={() => setImagePlace("0px")}>
-                            <BsFillArrowLeftSquareFill className='iconClass' />
+                            <SlActionUndo className='iconClass' />
                         </button>
 
                         <div className='divClassTwo'>
@@ -47,7 +66,7 @@ const MyValue = () => {
                              </div>
                         </div>
                         <button className='buttonFrontClass' onClick={() => setImagePlace("1200px")}>
-                            < BsFillArrowRightSquareFill className='iconClass' />
+                            < SlActionRedo className='iconClass' />
                         </button>
                     </MyValueSonTwoStyle>
 
@@ -58,16 +77,16 @@ const MyValue = () => {
 
                     <MyValueSonThreeStyle>
                         <button className='buttonBackClass' onClick={() => setImagePlace("600px")}>
-                            <BsFillArrowLeftSquareFill className='iconClass' />
+                            <SlActionUndo className='iconClass' />
                         </button>
                         <div className='divClassThree'>
                             <div className='divThree'>
                                 <h2>Educação</h2>
                                 <p>
-                                    Na minha opinião a educação vai muito alem do aprendizado intelectual,
+                                    Na minha opinião, a educação vai muito alem do aprendizado intelectual,
                                     um simples "bom dia" pode ser a mudança no dia de alguma pessoa, todos devem
                                     ser tratados da mesma forma, independente da classe social, estilo ou etnia.
-                                    Todos somos seres humanos e precisamos nos tratar da melhor forma possivel.
+                                    Afinal, todos somos seres humanos.
                                 </p>
                             </div>
 
@@ -81,6 +100,7 @@ const MyValue = () => {
 
         </MyValueStyle>
     )
-}
+    
+ };
 
 export default MyValue

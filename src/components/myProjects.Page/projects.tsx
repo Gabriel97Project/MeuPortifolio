@@ -5,6 +5,9 @@ import PhotoPartThree from "../../../src/Photo/siteformulariopng.png"
 import { ProjectsBoxesStyle, ProjectsStyle, ProjectsStyleSon } from './projectsStyle'
 import { useState } from "react"
 import ProjectsModal from "./projectsModal/projectsModal"
+import { IoLogoGithub } from "react-icons/io5";
+import { HiCursorClick } from "react-icons/hi";
+import { HiOutlineArrowLeftCircle } from "react-icons/hi2";
 
 
 
@@ -29,7 +32,10 @@ const Projects = () => {
 
     return (
         <ProjectsStyle>
-            <h1>Projetos concluidos:</h1>
+            <button className="ButtonPageBack">
+                 <a href="/"> <HiOutlineArrowLeftCircle className="backIcon"/></a>
+            </button>
+            <h1><a href="https://github.com/Gabriel97Project">   Esse é o meu GITHUB<IoLogoGithub/><HiCursorClick/> </a></h1>
             {photoOneState === true && <ProjectsModal setModalState={setPhotoOneState} photo={PhotoPartOne} />}
             {photoTwoState === true && <ProjectsModal setModalState={setPhotoTwoState} photo={PhotoPartTwo} />}
             {photoThreeState === true && <ProjectsModal setModalState={setPhotoThreeState} photo={PhotoPartThree} />}
@@ -70,11 +76,13 @@ const Projects = () => {
                     <p>
                         Sabemos a importância que um formulário desempenha em diversos sites, por isso
                         busquei estudos para desenvover um formulário que fosse funcional
-                        esteticamente atrativo, então cheguei a esse projeto. Creio que devemos sempre buscar
-                        novos conhecimentos e tentar aplica-los em futuros projetos.
+                        esteticamente atrativo, então cheguei a esse projeto. Devemos sempre buscar
+                        novos conhecimentos e aplica-los em futuros projetos.
                     </p>
                 </ProjectsBoxesStyle>
             </ProjectsStyleSon>
+            
+
         </ProjectsStyle>
     )
 }
